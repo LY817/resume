@@ -25,7 +25,7 @@
                     <button data-remodal-action="confirm" class="remodal-confirm">确定</button>
                 </div>-->
                 <h1 id="username">罗 裕</h1>
-                <h4 id="persona-tag">Java / 后端 / 微服务</h4>
+                <h4 id="persona-tag">Java / 后端 / Docker</h4>
             </div>
             <div class="profile info-unit">
                 <h2 class="info-header"><i class="iconfont icon-person"></i> <span class="info-title">基本信息</span></h2>
@@ -118,7 +118,7 @@
                 <ul class="experience-list">
                     <li>
                         <div style="float: left">
-                            <h3>湖北大学 －（本科）</h3>
+                            <h3>湖北大学 － 材料化学 －（本科）</h3>
                         </div>
                         <div style="float: right">
                             <h3>2011-09~2015-06</h3>
@@ -201,7 +201,7 @@
                             <br />
                             》掌握Linux命令行操作和编写shell脚本，能在linux环境下进行应用的调试和查找线上问题（在开发环境使用gitbash提高开发效率）
                             <br />
-                            》掌握Docker的基本使用，编写dockerfile来构建镜像
+                            》掌握Docker的基本使用，编写dockerfile构建镜像以及docker-compose部署配置文件
                             <br />
                             》掌握Git、SVN、Maven等团队开发工具，注重代码规范性和可读性
                             <br />
@@ -258,32 +258,31 @@
                         <h3>湖北电信聚翼社区</h3>
                     </li>
                     <p>
-                        【项目描述】
-                        <br />
-                        将人、地、事、物等要素全部纳入网格进行管理，整合与汇聚不同设备厂商的数据，提升社区治理工作水平，建设平安社区
-                        <br />
-                        【项目周期：2018-11 ~ 至今】
-                        <br />
-                        【技术选型】
-                        <br />
-                        》前端:
-                        Bootstrap、jQuery，使用Echarts做数据展示
-                        <br />
-                        》后端:
-                        <br />
-                        - 基于SpringBoot，war包部署到Weblogic；<br />
+                        【项目描述】<br />
+                        将人、地、事、物等要素全部纳入网格进行管理，整合与汇聚不同设备厂商的数据，提升社区治理工作水平，建设平安社区<br />
+                        【项目周期：2018-11 ~ 至今】<br />
+                        【技术选型】<br />
+                        》前端:<br />
+                        Bootstrap、jQuery，使用Echarts做数据展示<br />
+                        》后端:<br />
+                        - 基于SpringBoot搭建，war包部署到Weblogic；<br />
                         - MySQL数据库；<br />
                         - 数据库访问：JPA + Spring jdbcTemplate；<br />
                         - RPC调用：web层与数据访问层内外网分离，之间使用Dubbo的序列化协议替代http调用，使用局域网广播模式 <br />
-                        - ActiveMQ+protobuf获取安防厂家事件推送<br />
                         <br />
-                        【职责描述】
+                        【职责描述】<br />
+                        》web功能模块开发：社区物业相关数据模型的增删改查接口<br />
+                        》平台数据对接<br />
+                        - 与不同厂家进行小区安防业务模型数据对接与推送（利用Spring容器API和反射，根据参数中不同的厂家类型调用对应的实现类方法，达到与业务层解耦的目的）<br />
+                        - 利用ActiveMQ + protobuf订阅并解析海康安防设备事件推送<br />
+                        》设备对接<br />
+                        - 根据厂家提供的接口开发安卓设备服务接口<br />
+                        - 通过极光推送更新门禁机的人脸特征、广告等信息<br />
+                        》应用SaaS化:SpringBoot fat-jar包的docker化部署：维护容器化分支<br />
+                        - SpringBoot配置调整<br />
+                        - 服务镜像dockerfile编写<br />
+                        - 编写docker-compose<br />
                         <br />
-                        》web功能模块开发
-                        <br />
-                        》平台对接：与不同厂家进行小区安防业务模型数据对接
-                        <br />
-                        》设备对接：根据厂家提供的接口开发安卓设备服务接口
                     </p>
                     <br>
                     <hr>
@@ -291,31 +290,24 @@
                         <h3>湖北电信聚翼物联网管理平台</h3>
                     </li>
                     <p>
-                        【项目描述】
-                        <br />
+                        【项目描述】<br />
                         接入中国电信物联网平台为基础实现对厂家、产品、终端、数据和物联网卡的管理
-                        <br />【周期：2018-05 ~ 2018-10】
-                
                         <br />
-                        【技术选型】
-                        <br />
-                        》前端:
-                        <br />
-                        Bootstrap、jQuery
-                        <br />
-                        》后端:
-                        <br />
+                        【周期：2018-05 ~ 2018-10】<br />
+                        【技术选型】<br />
+                        》前端:<br />
+                        Bootstrap、jQuery<br />
+                        》后端:<br />
                         - 基于Spring + SpringMVC搭建，Weblogic做web容器；<br />
-                        - Oracle 业务数据；MongoDB 物联网设备数据<br />
+                        - Oracle 存储业务数据；存储MongoDB 物联网GPS设备数据<br />
                         - 数据访问使用Hibernate；<br />
                         - web层与数据访问层内外网分离，之间使用SpringMVC实现的http；<br />
                         - 消息中间件：RocketMQ 物联网设备上报数据流转；<br />
                         <br />
-                        【职责描述】
-                        <br />
-                        》web功能模块开发
-                        <br />
-                        》接入物联网设备上报数据解析、存储以及展示
+                        【职责描述】<br />
+                        》web功能模块开发：物联网设备、产品、厂商、用户、套餐等数据模型的增删改查操作<br />
+                        》接入物联网设备上报数据解析、存储以及展示<br />
+                        - 利用MongoDB存储电动车GPS定位数据
                     </p>
                     <br>
                     <hr>
@@ -323,58 +315,71 @@
                         <h3>湖北移动集客全生命周期系统</h3>
                     </li>
                     <p>
-                        【项目描述】
-                        <br />
-                        建立集团客户开通业务开通全流程支撑平台
-                        <br />
-                        【周期：2017-10 ~ 2018-1】
-                        <br />
-                        在产品线版本基础上做的需求开发
-                        <br />
-                        【技术选型】
-                        <br />
-                        》前端:
-                        <br />
-                        Bootstrap、jQuery，使用ext.js和ht.js封装的报表视图组件
-                        <br />
+                        【项目描述】<br />
+                        建立集团客户开通业务开通全流程支撑平台<br />
+                        【周期：2017-10 ~ 2018-04】<br />
+                        在产品线版本基础上做的需求开发<br />
+                        【技术选型】<br />
+                        》前端:<br />
+                        Bootstrap、jQuery，使用ext.js和ht.js封装的报表视图组件 <br />
                         》后端:
                         <br />
                         - Tomcat作为web容器；<br />
                         - Oracle数据库；<br />
                         - 使用SSM框架开发，前后端通信使用DWR框架，在前端动态生成JavaScript代理SpringMVC的controller类中的方法。使用WebService做数据接口<br />
                         <br />
-                        【职责描述】
-                        <br />
-                        根据湖北移动用户的需求在项目基础上进行本地化需求开发（包括前后端业务代码和配套的接口开发）
+                        【职责描述】<br />
+                        根据湖北移动用户的需求在项目基础上进行本地化需求开发<br />
+                        - 包括前端报表展示与SQL编写、后端业务代码开发<br />
+                        - 配套的项目间接口开发<br />
                     </p>
                     <br>
-                    <!-- <hr>
+                    <hr>
                     <li>
-                        <h3>湖北路桥智慧工地一期</h3>
+                        <h3>路桥智慧工地</h3>
                     </li>
                     <p>
-                        【项目描述】
-                        <br />
-                        为集团用户和项目用户提供项目工地的人员、设备进行集中化的监控和管理平台
-                        <br />【周期：2018-7】
-                        <br />
-                        项目起步阶段
-                        <br />
-                        【技术选型】
-                        <br />
+                        【项目描述】<br />
+                        为集团用户和项目用户提供项目工地的人员、设备进行集中化的监控和管理平台<br />
+                        【周期：2017-05 ~ 2017-09】<br />
+                        
+                        【技术选型】<br />
                         》前端:
                         <br />
-                        使用vue作为前端框架，echarts做数据可视化
+                        Bootstrap、jQuery，echarts做数据可视化
                         <br />
-                        》后端:
-                        <br />
-                        技术选型与物联网管理平台相同，数据库使用的MySQL
+                        》后端:<br />
+                        - Tomcat作为web容器；<br />
+                        - 数据库使用的MySQL<br />
+                        - 使用SSM框架<br />
                         <br />
                         【职责描述】
                         <br />
-                        框架搭建；用户身份验证和登陆流程；根据设计图使用前端框架完成固定数据的demo样例；与设计人员沟通细节，完成相关模块的开发
+                        - 框架搭建<br />
+                        - 用户身份验证和登陆流程<br />
+                        - 工地视频监控视频流的接入管理和播放<br />   
                     </p>
-                    </li> -->
+                    </li>
+                    <hr>
+                    <li>
+                        <h3>湖北移动运维项目</h3>
+                    </li>
+                    <p>
+                        【项目描述】<br />
+                        需求开发：根据湖北移动用户所提需求，开发各业务系统之间的数据接口、信息流转、报表呈现<br />
+                        【周期：2016-06 ~ 2017-05】<br />
+                        【技术选型】<br />
+                        业务数据处理程序使用Spring+MyBatis，通过linux中的crontab定时执行启动脚本；<br />
+                        业务系统的定制化开发主要使用SSM和SSH框架<br />
+                        系统间数据接口使用http和WebService协议<br />
+                        <br />
+                        【职责描述】
+                        <br />
+                        - 报表定制化开发<br />
+                        - 业务数据处理（定时任务）<br />
+                        - 系统间数据数据接口<br />
+                    </p>
+                    </li>
                 </ul>
             </div>
         </div>
