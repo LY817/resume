@@ -132,7 +132,7 @@ footer {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
 progress {
@@ -278,6 +278,10 @@ ul li{
     visibility: hidden;
     cursor: pointer;
     
+}
+
+.experience-list li{
+    list-style-type:none;
 }
 
  .stack-list .item-remove {
