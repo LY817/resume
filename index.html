@@ -102,6 +102,9 @@
                     <li>
                         <label class="left-label">邮箱</label><span class="label-value">luoyu817@126.com</span>
                     </li>
+                    <li>
+                        <label class="left-label">博客</label><span class="label-value"><a href="https://ly817.github.io/">ly817.github.io</a></span>
+                    </li>
                 </ul>
             </div>
             <div class="code info-unit">
@@ -217,13 +220,14 @@
                             <!-- dubbo-admin相关概念 -->
                             <!-- 调用接口 > 动态代理 >  -->
                             <!-- &nbsp;&nbsp;&nbsp;- 掌握RocketMQ<br/> -->
-                            &nbsp;&nbsp;&nbsp;- 了解Nacos服务注册与配置中心<br/>
+                            &nbsp;&nbsp;&nbsp;- Nacos服务注册与配置中心<br/>
                             <!-- eureka 短连接轮训拉取 -> nacos长连接推送 基于http长轮训 -> k8s外层路由 -->
                             &nbsp;&nbsp;&nbsp;- 了解Sentinel流量控制/熔断保护/链路跟踪<br/>
                             &nbsp;&nbsp;&nbsp;- 了解Seata分布式事务框架<br/>
                             <!-- 属于不会被k8s取代的功能 -->
                             <br />
                             <b>》其他常用框架</b><br/>
+                            - 掌握MyBatis/mybatis-plus、JPA等ORM框架<br/>
                             - 掌握常用web容器:Tomcat、Weblogic<br/>
                             - 掌握Netty网络通信框架<br/>
                             &nbsp;&nbsp;&nbsp;- 掌握NIO非阻塞编程<br/>
@@ -234,17 +238,17 @@
                             <!-- 解决拆包粘包问题 协议 -->
                             <!-- handler事件编程模型 面向pipeline 管道  context -->
                             <!-- 与spring整合 springboot启动netty服务端 多例handler -->
-                            - 掌握MyBatis/mybatis-plus、JPA等ORM框架<br/>
+                            
                             <br />
                             <b>》熟悉关系型数据库MySQL</b><br />
                             - 掌握SQL语句编写与常用优化手段<br/>
                             - 了解InnoDB引擎的相关特性<br/>
                             <br />
                             <b>》Redis、RocketMQ、MongoDB等中间件 </b><br />
-                            <b>- 掌握常用的数据模型、操作API和部署配置</b><br />
+                            <b>- 掌握常用的概念模型、操作API和部署配置，了解实现原理</b><br />
                             <!-- redis 数据库查询缓存、SETNX幂等性、list实现队列实现不同进程之前通信 -->
                             <!-- rocketmq解耦合、削峰填谷、重试、half消息最终一致性 -->
-                            <!-- 持久化非关系型数据库 gis索引 -->
+                            <!-- MongoDB持久化非关系型数据库 gis索引 -->
                             <b>》Linux系统</b><br />
                             - 掌握常用命令行操作<br/>
                             - 能在linux环境下进行应用的调试和排查线上问题<br/>
@@ -260,9 +264,9 @@
                             - 掌握Docker的使用以及编写dockerfile以及entrypoint启动脚本构建镜像<br />
                             - 了解k8s相关概念、概念模型，以及kubectl常用API<br/>
                             <br />
-                            <b>》掌握Git、SVN、Maven、swagger等团队开发工具</b><br />
+                            <b>》掌握Git、SVN、Maven等团队开发工具</b><br />
                             <b>》了解敏捷开发相关，注重代码规范性和可读性</b><br />
-                            <b>》熟练掌握IDEA、Postman等开发和调试工具</b><br />
+                            <b>》熟练掌握IDEA、Postman、Wireshark等开发和调试工具</b><br />
                             <b>》具备良好的书面表达能力，掌握Markdown语法</b><br />
                             <b>》具备良好的逻辑思维，能使用processOn辅助工具绘制流程图和UML类图</b><br />
                             <!-- 》了解DDD领域驱动<br/> -->
@@ -278,10 +282,11 @@
                             <!-- 教学视频 技术分析公开课 开源社区 -->
                             <br />
                             <b>》动手能力</b><br />
-                            fork经典的开源项目来阅读源码，以便添加注释笔记（<a href="https://gitee.com/luoyu817/learn-netty">Netty</a>&<a href="https://gitee.com/luoyu817/learn-dubbo">Dubbo</a>）
+                            fork经典的开源项目来阅读源码，以便添加注释笔记
+                            <!-- （<a href="https://gitee.com/luoyu817/learn-netty">Netty</a>&<a href="https://gitee.com/luoyu817/learn-dubbo">Dubbo</a>） -->
                             <br />
                             <b>》英文阅读能力（CET-6）</b><br />
-                            能通过查阅英文官方文档和Github和Stack Overflow解决遇到的问题
+                            能通过查阅英文官方文档、Github和Stack Overflow解决遇到的问题
                         </p>
                     </li>
 
@@ -302,6 +307,7 @@
                         <p>》具备有良好的书面表达能力；良好的工作习惯，写工作日志，列当日工作计划，记录思路和进度</p> -->
                     </ul>
                     <br />
+                    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
                 </p>
             </div>
 
@@ -315,36 +321,38 @@
                     </li>
                     <p>
                         【项目描述】<br />
-                         随着接入的小区数目上升和后续的需求迭代，原先的单体架构显现出性能和代码发布管理的问题。于是引入微服务来剥离原有高负载业务（app服务端）和开发新增的业务模块<br />
+                         随着接入的小区数目上升和后续的需求迭代，原先的单体架构显现出性能和代码发布管理的问题。于是引入微服务来进行服务治理和剥离原有高负载业务（通行记录相关）<br />
                         【项目周期：2019-09 ~ 至今】<br />
                         【技术选型】<br />
-                        - 基于Spring Cloud Netflix微服务工具集构建<br />
-                        &nbsp;&nbsp;&nbsp;- 基于Eureka服务注册与发现<br />
+                        - 基于Spring Cloud微服务工具集构建<br />
+                        &nbsp;&nbsp;&nbsp;- 基于Nacos服务注册中心和配置管理<br />
                         &nbsp;&nbsp;&nbsp;- 基于OpenFeign的伪RPC调用<br />
-                        &nbsp;&nbsp;&nbsp;- 基于Zuul的api网关<br />
+                        <!-- &nbsp;&nbsp;&nbsp;- 基于Zuul的api网关<br /> -->
                         - Netty实现WebSocket消息推送服务端<br />
-                        <!-- 连接数最高大概在2000 -->
-                        - RocketMQ消息中间件<br />
+                        - RocketMQ消息中间件 实现业务解耦和消息推送<br />
                         <br />
                         【职责描述】<br />
-                        - zuul网关次开发<br />
+                        - 整合Nacos服务注册和配置管理<br />
+                        &nbsp;&nbsp;&nbsp;- 管理第三方厂家对接应用服务配置<br />
+                        &nbsp;&nbsp;&nbsp;- 服务提供者：通行记录接受服务&映射关系通用缓存查询服务<br />
+                        &nbsp;&nbsp;&nbsp;- 服务消费者：20+个第三方厂家对接服务作为服务消费者<br />
+                        - 基于Redis的数据模型映射关系通用缓存查询服务<br />
+                        <!-- 缓存双写 cache aside -->
+                        <!-- - Zuul网关二次开发<br /> -->
                         <!-- 路由动态配置、用户身份验证、灰度发布、动态转发 -->
                         <!-- &nbsp;&nbsp;&nbsp;- 动态转发：根据调用方所属小区不同，将请求转发到不同厂家门禁微服务实现<br/> -->
-                        &nbsp;&nbsp;&nbsp;- 接口统一鉴权<br/>
+                        <!-- &nbsp;&nbsp;&nbsp;- 接口统一鉴权<br/> -->
                         <!-- 对header中的鉴权消息进行鉴权 得到接入方信息添加到参数中 -->
                         <!-- 鉴权逻辑 -->
-                        &nbsp;&nbsp;&nbsp;- 服务路由信息动态配置<br/>
+                        <!-- &nbsp;&nbsp;&nbsp;- 服务路由信息动态配置<br/> -->
                         <!-- 统一对外暴露的接口 第三方厂家回调接口 开发好了一个解析服务 -->
-                        &nbsp;&nbsp;&nbsp;- 封装并暴露服务注册列表信息查询<br/>
+                        <!-- &nbsp;&nbsp;&nbsp;- 封装并暴露服务注册列表信息查询<br/> -->
                         <!-- 为客户端提供WebSocket服务端地址查询服务 -->
-                        - 通行记录改造<br/>
+                        - 通行记录功能改造<br/>
                         &nbsp;&nbsp;&nbsp;- 由轮询扫表模式改为基于RocketMQ+Netty WebSocket实现的事件推送<br/>
                         &nbsp;&nbsp;&nbsp;- 通行记录展示推送、布控告警推送、信息通知等<br/>
-                        &nbsp;&nbsp;&nbsp;- 基于Eureka实现WebSocket服务，基于客户端的负载均衡<br/>
-                        <!-- - 智慧社区居民手机app和第三方门禁机服务端迁移到微服务架构<br />
-                        &nbsp;&nbsp;&nbsp;- 社区业务模型缓存查询服务<br/>
-                        &nbsp;&nbsp;&nbsp;- app和门禁服务访问频次高与系统耦合度较低<br/> -->
-                        - 智慧社区综合治理相关业务模块功能开发<br />
+                        &nbsp;&nbsp;&nbsp;- 基于注册中心实现WebSocket服务信息发布，在客户端登录时根据可用的websocket服务实现负载均衡<br/>
+                        - 智慧社区后续迭代版本的功能开发<br />
                         <br />
                         【收获】<br/>
                         - SpringCloud相关组件实践经验<br/>
@@ -352,8 +360,6 @@
                     </p>
                     <br>
                     <hr>
-
-
                     <li>
                         <h3>湖北电信聚翼社区</h3>
                     </li>
@@ -373,10 +379,16 @@
                         【职责描述】<br />
                         》功能模块开发<br />
                         -社区物业相关设计需求的实现与功能迭代<br />
-                        》平台间数据对接<br />
-                        - 与不同厂家进行小区安防业务模型数据对接与推送<br />
+                        》第三方厂家数据对接<br />
+                        - 小区安防业务模型数据同步<br />
+                        <!-- Controller操作埋点获取参数 -->
+                        <!-- mq解耦 使用topic-tag分发 -->
+                        <!-- mq特性 重试 是重新投递到新的topic中%RETRY% 和mqSelector局部有序  -->
                         <!-- （利用Spring容器API和反射，根据参数中不同的厂家类型调用对应的实现类方法，达到与业务层解耦的目的） -->
-                        - 利用ActiveMQ + protobuf订阅并解析海康安防设备事件推送<br />
+                        &nbsp;&nbsp;&nbsp;- 通用推送/同步starter模块的设计和开发<br />
+                        &nbsp;&nbsp;&nbsp;- 不同厂家的接口对接、开发、联调<br />
+                        - 获取通行记录
+                        &nbsp;&nbsp;&nbsp- 利用ActiveMQ + protobuf订阅并解析海康安防设备事件推送<br />
                         》设备对接<br />
                         - 根据厂家提供的接口开发安卓设备服务接口<br />
                         - 通过极光推送更新门禁机的人脸特征、广告等信息<br />
@@ -422,7 +434,7 @@
                     <p>
                         【项目描述】<br />
                         建立集团客户开通业务开通全流程支撑平台<br />
-                        【周期：2017-06 ~ 2018-03】<br />
+                        【周期：2017-10 ~ 2018-03】<br />
                         在产品线版本基础上做的需求开发<br />
                         【技术选型】<br />
                         》前端:<br />
@@ -442,6 +454,7 @@
                         - 实践Maven模块化开发和git使用<br/>
                     </p>
                     <br>
+                    <br /><br /><br /><br />
                     <hr>
                     <li>
                         <h3>湖北移动运维项目</h3>
@@ -450,7 +463,7 @@
                         【项目描述】<br />
                         需求开发<br />
                         根据湖北移动用户所提需求，开发各业务系统之间的数据接口、信息流转、报表呈现<br />
-                        【周期：2016-06 ~ 2018-05 亿阳期间】<br />
+                        【周期：2016-06 ~ 2018-05 亿阳工作期间】<br />
                         【技术选型】<br />
                         业务数据处理程序使用Spring+MyBatis，通过linux中的crontab定时执行启动脚本<br />
                         业务系统的定制化开发主要使用SSM和SSH框架<br />
