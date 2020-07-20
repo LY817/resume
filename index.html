@@ -82,7 +82,7 @@
                         <label class="left-label">持久化框架</label><span class="label-value">JPA、MyBatis</span>
                     </li>
                     <li>
-                        <label class="left-label">数据库</label><span class="label-value">MySQL、MongoDB</span>
+                        <label class="left-label">数据存储</label><span class="label-value">MySQL、MongoDB</span>
                     </li>
                     <li>
                         <label class="left-label">中间件</label><span class="label-value">RocketMQ、Redis</span>
@@ -135,21 +135,6 @@
 
         </div>
         <div class="main">
-            <!-- <div class="education info-unit right-list">
-                <h2 class="info-header"><i class="iconfont icon-education"></i> <span class="info-title">教育经历</span>
-                </h2>
-                <hr>
-                <ul class="experience-list">
-                    <li>
-                        <div style="float: left">
-                            <h3>湖北大学 － 材料化学 －（本科）</h3>
-                        </div>
-                        <div style="float: right">
-                            <h3>2011-09~2015-06</h3>
-                        </div>
-                    </li>
-                </ul>
-            </div> -->
             <div class="work info-unit right-list">
                 <h2 class="info-header"><i class="iconfont icon-work"></i> <span class="info-title">工作经历</span></h2>
                 <hr>
@@ -164,12 +149,13 @@
                             </div>
                             <div style="float: left">
                                 <p>
-                                    聚翼物理网、聚翼智慧社区云平台系统设计与功能开发
+                                    聚翼物联网、聚翼智慧社区云平台系统设计与功能开发
                                     <br />
                                     <b>【工作内容】</b>
                                     <br />
-                                    <b>》参与聚翼智慧社区云平台系统设计与功能开发</b><br/>
-                                    - 通行记录、事件推送等模块<br/>
+                                    <b>》聚翼物联相关产品的系统设计与功能开发</b><br/>
+                                    - 业务功能接口开发<br/>
+                                    - 通行记录、事件推送功能<br/>
                                     - 微服务化改造<br/>
                                     <b>》厂家对接</b><br/>
                                     - 负责对接不同厂家平台和设备进行数据同步<br/>
@@ -233,7 +219,7 @@
                             &nbsp;&nbsp;&nbsp;- Zuul网关<br/>
                             - Spring Cloud Alibaba微服务开源组件<br/>
                             <!-- SPI dubbo sentinel规则扩展 senta  -->
-                            &nbsp;&nbsp;&nbsp;- Nacos服务注册与配置中心<br/>
+                            &nbsp;&nbsp;&nbsp;- Nacos服务注册中心与配置中心<br/>
                             <!-- eureka 短连接轮训拉取 -> nacos长连接推送 基于http长轮训 -> k8s外层路由 -->
                             &nbsp;&nbsp;&nbsp;- 了解Sentinel流量控制/熔断保护/链路跟踪<br/>
                             &nbsp;&nbsp;&nbsp;- 了解Seata分布式事务框架<br/>
@@ -248,7 +234,7 @@
                             - 掌握常用web容器:Tomcat、Weblogic<br/>
                             - 掌握Netty网络通信框架<br/>
                             &nbsp;&nbsp;&nbsp;- 掌握NIO非阻塞编程<br/>
-                            &nbsp;&nbsp;&nbsp;- 了解linux selector模型和epoll模型<br/>
+                            <!-- &nbsp;&nbsp;&nbsp;- 了解linux selector模型和epoll模型<br/> -->
                             &nbsp;&nbsp;&nbsp;- 了解tcp协议以及http、mqtt应用层协议<br/>
                             <!-- 两种kernel系统调用 多fd io事件的获取 
                             - selector每次轮训所有fd 获取fd事件
@@ -268,7 +254,7 @@
                             - RocketMQ<br/>
                             <!-- rocketmq解耦合、削峰填谷、重试、half消息最终一致性 -->
                             - MongoDB<br/>
-                            <!-- MongoDB持久化非关系型数据库 gis索引 -->
+                            <!-- MongoDB持久化非关系型数据库 内置的gis索引 -->
                             <br />
                             <b>》Linux操作系统</b><br />
                             - 掌握常用命令行操作<br/>
@@ -311,7 +297,7 @@
                             <!-- 思路：抓主线 注入spring容器作为切入点 -->
                             了解过源码的项目：<br />
                             - SpringBoot<br />
-                            - MyBatis<br />
+                            <!-- - MyBatis<br /> -->
                             <!-- 执行器实现一级（BaseExecutor）和二级（CachingExecutor）缓存 -->
                             - Eureka + Ribbon + openfeign<br />
                             <!-- server：注册表三级缓存 读写分离 client：嵌套提交延时任务 -->
@@ -358,13 +344,15 @@
                         - 根据新的业务需求进行版本迭代<br/>
                          【项目周期：2019-09 ~ 至今】<br />
                         【技术选型】<br />
-                        - 基于Spring Cloud微服务工具集构建<br />
+                        - 基于Spring Cloud微服务工具集<br />
                         &nbsp;&nbsp;&nbsp;- Nacos服务注册中心和配置管理<br />
                         &nbsp;&nbsp;&nbsp;- OpenFeign的伪RPC调用<br />
-                        <!-- &nbsp;&nbsp;&nbsp;- 基于Zuul的api网关<br /> -->
+                        <!-- 需要通过api 网关把微服务接口暴露出去 不是dubbo 对内rpc对外rest  -->
+                        &nbsp;&nbsp;&nbsp;- Zuul网关<br />
+                        <!-- 对外暴露的服务 添加身份认证功能 -->
                         - RocketMQ消息中间件 实现业务解耦和消息推送<br />
                         - Netty实现WebSocket消息推送服务端<br />
-                        <br />
+
                         【职责描述】<br />
                         - 整合Nacos服务注册和配置管理<br />
                         &nbsp;&nbsp;&nbsp;- 管理第三方厂家对接应用服务配置<br />
@@ -387,7 +375,6 @@
                         &nbsp;&nbsp;&nbsp;- 通行记录展示推送、布控告警推送、信息通知等<br/>
                         &nbsp;&nbsp;&nbsp;- 基于注册中心实现WebSocket服务信息发布，在客户端登录时根据可用的websocket服务实现负载均衡<br/>
                         - 智慧社区后续迭代版本的功能开发<br />
-                        <br />
                         【收获】<br/>
                         - SpringCloud相关组件实践经验<br/>
                         - 基于Netty的网络编程实践经验<br/>
@@ -408,8 +395,8 @@
                         <!-- &nbsp;&nbsp;&nbsp;- 只使用一个dubbo接口 利用dubbo序列化提高传输效率和负载均衡特性 -->
                         <!-- &nbsp;&nbsp;&nbsp;- 广播模式 多个数据访问实例实现负载均衡 -->
                         - MySQL数据库<br />
-                        - 数据库访问：JPA + Spring jdbcTemplate<br />
-                        <br />
+                        - ORM框架：Mybatis<br />
+                        
                         【职责描述】<br />
                         》功能模块开发<br />
                         -社区物业相关设计需求的实现与功能迭代<br />
@@ -419,10 +406,11 @@
                         <!-- mq解耦 使用topic-tag分发 -->
                         <!-- mq特性 重试 是重新投递到新的topic中%RETRY% 和mqSelector局部有序  -->
                         <!-- （利用Spring容器API和反射，根据参数中不同的厂家类型调用对应的实现类方法，达到与业务层解耦的目的） -->
-                        &nbsp;&nbsp;&nbsp;- 通用推送/同步starter模块的设计和开发<br />
+                        &nbsp;&nbsp;&nbsp;- 通用推送逻辑的设计和实现：aop埋点/同步解析端starter模块<br />
                         &nbsp;&nbsp;&nbsp;- 不同厂家的接口对接、开发、联调<br />
-                        - 获取通行记录
+                        - 获取通行记录<br />
                         &nbsp;&nbsp;&nbsp- 利用ActiveMQ + protobuf订阅并解析海康安防设备事件推送<br />
+                        &nbsp;&nbsp;&nbsp- 订阅-回调模式<br />
                         》设备对接<br />
                         - 根据厂家提供的接口开发安卓设备服务接口<br />
                         - 通过极光推送更新门禁机的人脸特征、广告等信息<br />
@@ -430,7 +418,6 @@
                         <!-- 收到实现双向http通行 解决拆包问题 -->
                         <!-- handler之间交互 上一级多次调用 缓存 拼装好了 fireXXX传递给下一个handler的方法 -->
                         <!-- 基于blockingQueue实现 推送数据 同步返回响应 -->
-                        <br />
                         【收获】<br/>
                         - 在与合作企业接口对接的过程中，通过的接口文档阅读和系统的使用加深了系统和接口设计的理解<br/>
                         - 了解了系统间多种数据交互方式和系统对接模式<br/>
@@ -448,17 +435,22 @@
                         <br />
                         【周期：2018-05 ~ 2018-10】<br />
                         【技术选型】<br />
-                        - 基于Spring + SpringMVC搭建，Weblogic做web容器；<br />
-                        - Oracle 存储业务数据；存储MongoDB 物联网GPS设备数据<br />
-                        - 数据访问使用Hibernate；<br />
-                        - RPC调用：web层与数据访问层内外网分离，之间使用Dubbo的序列化协议替代http调用，使用局域网广播模式 <br />
+                        - 基于Spring + SpringMVC搭建，Weblogic做web容器<br />
+                        - 数据存储：Oracle + MongoDB<br />
+                        - ORM框架：JPA + Spring jdbcTemplate/mongoTemplate<br />
+                        - 数据访问使用Hibernate<br />
+                        - RPC调用：web层与数据访问层内外网分离，之间使用Dubbo的通信协议替代http调用，服务发现使用组播模式 <br />
                         - 消息中间件：RocketMQ 物联网设备上报数据流转<br />
-                        <br />
+                        
                         【职责描述】<br />
-                        》web功能模块开发：物联网设备、产品、厂商、用户、套餐等数据模型的增删改查操作<br />
+                        》web功能模块开发<br />
+                        - 物联网设备、产品、厂商、用户、套餐等数据模型的增删改查操作<br />
                         》接入物联网设备上报数据解析、存储以及展示<br />
                         - 利用MongoDB存储设备上报<br />
                         - 电动车GPS数据 利用2d索引实现位置消息查询<br />
+                        【收获】<br/>
+                        - Dubbo使用经验<br/>
+                        - 熟悉了RocketMQ、MongoDB等中间件<br/>
                     </p>
                     <br />
                     <hr>
@@ -471,13 +463,14 @@
                         根据湖北移动用户所提需求，开发各业务系统之间的数据接口、信息流转、报表呈现<br />
                         【周期：2016-06 ~ 2018-05 亿阳工作期间】<br />
                         【技术选型】<br />
-                        业务数据处理程序使用Spring+MyBatis，通过linux中的crontab定时执行启动脚本<br />
+                        业务数据处理程序使用Spring + MyBatis，通过linux中的crontab定时执行启动脚本<br />
                         业务系统的定制化开发主要使用SSM和SSH框架<br />
                         系统间数据接口使用http和WebService协议<br />
                         【职责描述】<br />
-                        - 报表定制化开发<br />
+                        - 公司产品线项目本地化二次开发<br />
                         - 业务数据处理（定时任务）<br />
                         - 系统间数据数据接口<br />
+                        <!-- http、文件、数据库、mq -->
                         - 学习“新”技术 应用到开发中 提高开发效率<br />
                         &nbsp;&nbsp;&nbsp- Spring Boot：根据业务场景整理模板starter，规范和简化后续开发<br/>
                         &nbsp;&nbsp;&nbsp- Maven：使用Maven替代原来的复制项目，拷贝jar包<br/>
@@ -487,7 +480,7 @@
                         - 熟悉了Linux基本操作<br/>
                     </p>
 
-                    <!-- <br><br /><br /><br />
+                    <br>
                     <hr>
                     <li>
                         <h3>湖北移动集客全生命周期系统</h3>
@@ -505,7 +498,7 @@
                         - Tomcat作为web容器<br />
                         - Oracle数据库<br />
                         - 使用SSM框架开发，前后端通信使用DWR框架，在前端动态生成JavaScript代理SpringMVC的controller类中的方法。使用WebService做数据接口<br />
-                        <br />
+                        
                         【职责描述】<br />
                         根据湖北移动用户的需求在项目基础上进行本地化需求开发<br />
                         - 包括前端报表展示与SQL编写、后端业务代码开发<br />
@@ -513,8 +506,9 @@
                         【收获】<br />
                         - 参与跨地区远程开发团队合作开发<br/>
                         - 实践Maven模块化开发和git使用<br/>
-                    </p> -->
+                    </p>
                     <br>
+                    <hr>
                 </ul>
             </div>
         </div>
