@@ -5,103 +5,95 @@
     <hr>
     <ul class="experience-list">
         <li>
-            <h3><a href="https://www.processon.com/embed/6119b7775653bb04f331b9cb" target="_blank">技术栈</a></h3>
+<!--            连接-->
+<!--            <h3><a href="https://www.processon.com/embed/6119b7775653bb04f331b9cb" target="_blank">技术栈</a></h3>-->
+            <h3>技术栈</h3>
             <p>
                 <b>✅ 熟练掌握Java语言</b><br />
-                ▶️ 掌握JDK常用API如注解、反射、线程池、JUC并发包、集合类、lambda表达式、stream API等<br />
-                ▶️ 熟悉JVM内存模型、类加载机制以及常用垃圾收集器，了解常用JVM启动参数调优手段<br />
-                <br />
-                <b>✅ 熟练掌握Spring Framework和Spring Boot</b><br />
-                ▶️ 熟悉Spring Framework API，掌握IoC容器、AOP原理<br/>
-                ▶️ 熟悉Spring Boot特性：自动装配（注解驱动、SPI）、外部化配置等<br/>
-                ▶️ 熟练掌握Spring MVC和Servlet API<br/>
-                <br />
-                <b>✅ 掌握常用分布式开发框架</b><br />
-                ▶️ 了解微服务相关理论<br />
-                <!-- &nbsp;&nbsp;&nbsp;- CAP<br/>
-                &nbsp;&nbsp;&nbsp;- RESTful接口语义<br/> -->
-                ▶️ Spring Cloud Netflix微服务开源组件<br/>
-                &nbsp;&nbsp;&nbsp;⏩ 掌握Eureka服务注册发现<br/>
-                &nbsp;&nbsp;&nbsp;⏩ 掌握Feign声明式客户端<br/>
-                &nbsp;&nbsp;&nbsp;⏩ 掌握Ribbon负载均衡<br/>
-                <!-- &nbsp;&nbsp;&nbsp;- Hystrix熔断限流<br/>
-                &nbsp;&nbsp;&nbsp;- Zuul网关<br/> -->
-                ▶️ Spring Cloud Alibaba微服务开源组件<br/>
-                <!-- SPI dubbo sentinel规则扩展 senta  -->
-                &nbsp;&nbsp;&nbsp;⏩ 掌握Nacos服务注册中心与配置中心<br/>
+                ▶️ 熟悉JVM内存模型、类加载机制以及常用垃圾收集器<br />
+                ▶️ 掌握Java runtime中的常用API如 java.lang.*、JUC、lambda表达式等<br />
+                ⚛️ 掌握Project Reactor响应式编程<br />
+<!--                <br />-->
+                <b>✅ 掌握Spring Framework/Spring Boot，能熟练使用相关特性</b><br />
+<!--                ▶️ 熟悉Spring Framework API，掌握IoC容器、AOP原理<br/>-->
+<!--                ▶️ 熟悉Spring Boot特性：自动装配（注解驱动、SPI）、外部化配置等<br/>-->
+
+<!--                <br />-->
+                <b>✅ 掌握常用分布式系统开发框架</b><br />
+                ▶️ Spring Cloud Netflix<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;了解Eureka、Feign、Ribbon、Hystrix、Hystrix、Zuul等微服务工具集<br/>
+                ▶️ Spring Cloud Alibaba<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;⏩️ 掌握Dubbo：了解RPC实现原理<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;⏩ 掌握Nacos服务注册中心与配置中心<br/>
                 <!-- eureka 短连接轮训拉取 -> nacos长连接推送 基于http长轮训 -> k8s外层路由 -->
-                &nbsp;&nbsp;&nbsp;⏩ 了解Sentinel流量控制/熔断保护/链路跟踪<br/>
-                &nbsp;&nbsp;&nbsp;⏩ 了解Seata分布式事务框架<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;⏩ 了解Sentinel流量控制/熔断保护/链路跟踪<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;⏩ 了解Seata分布式事务框架<br/>
                 <!-- 属于不会被k8s取代的功能 -->
-                ▶️ 掌握Dubbo：了解Dubbo实现原理、配置<br/>
-                <!-- dubbo-admin相关概念 -->
-                <!-- 调用接口 > 动态代理 >  -->
-                <!-- &nbsp;&nbsp;&nbsp;⏩ 掌握RocketMQ<br/> -->
-                <br />
-                <b>✅ 其他常用框架</b><br/>
-                ▶️ 掌握常用web容器:Tomcat、Weblogic<br/>
+                ▶️ 了解分布式系统设计的相关理论<br />
+<!--                <br />-->
+                <b>✅ Web/网络</b><br/>
+                ▶️ 掌握常用web中间件:Tomcat、Weblogic<br/>
+                ▶️ 熟练掌握Spring MVC和Servlet API<br/>
                 ▶️ 掌握Netty网络通信框架<br/>
-                &nbsp;&nbsp;&nbsp;⏩ 掌握NIO非阻塞编程<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;⏩ 掌握非阻塞编程API<br/>
                 <!-- &nbsp;&nbsp;&nbsp;- 了解linux selector模型和epoll模型<br/> -->
-                &nbsp;&nbsp;&nbsp;⏩ 了解tcp协议以及http、mqtt应用层协议<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;⏩ 了解TCP/IP常用的网络协议<br/>
                 <!-- 两种kernel系统调用 多fd io事件的获取 
                 - selector每次轮训所有fd 获取fd事件
                 - epoll 在内核中维护fd，基于网卡事件 获取fd事件 效率更高 -->
                 <!-- 解决拆包粘包问题 协议 -->
                 <!-- handler事件编程模型 面向pipeline 管道  context -->
                 <!-- 与spring整合 springboot启动netty服务端 多例handler -->
-                
-                <br />
+<!--                <br />-->
                 <!-- <b>✅ 了解常用设计模式，以及OOP、AOP、MVC、DDD设计思想</b><br /> -->
                 <b>✅ 熟悉MySQL关系型数据库</b><br />
                 ▶️ 掌握SQL语句编写与常用优化手段<br/>
-                ▶️ 了解InnoDB引擎的相关特性<br/>
+                ▶️ 了解InnoDB引擎的实现与相关特性<br/>
                 ▶️ 掌握MyBatis/mybatis-plus、JPA等ORM框架<br/>
                 
                 
-                <br />
-                <b>✅ 掌握下列常用中间件：基础概念、数据模型、操作API和部署配置 </b><br />
-                ▶️ Redis<br/>
+<!--                <br />-->
+                <b>✅ 掌握常用中间件：Redis、MongoDB、RocketMQ</b><br />
+<!--                ▶️ Redis<br/>-->
                 <!-- redis 数据库查询缓存、SETNX幂等性、list实现队列实现不同进程之前通信 -->
-                ▶️ MongoDB<br/>
+<!--                ▶️ MongoDB<br/>-->
                 <!-- MongoDB持久化非关系型数据库 内置的gis索引 -->
-                ▶️ ElasticSearch<br />
+<!--                ▶️ ElasticSearch<br />-->
                 <!-- - Kafka<br /> -->
-                ▶️ RocketMQ<br/>
+<!--                ▶️ RocketMQ<br/>-->
                 <!-- rocketmq解耦合、削峰填谷、重试、half消息最终一致性 -->
-                <br />
+<!--                <br />-->
                 <b>✅ Linux操作系统</b><br />
-                ▶️ 掌握常用命令行操作,能在linux环境下进行运维操作和排查线上问题<br/>
                 ▶️ 对计算机组成原理有基本认识<br/>
+                ▶️ 掌握常用命令行操作,能在linux环境下进行运维操作和排查线上问题<br/>
+
                 <!-- 查看系统的状态 进程top 内存free 网络iostat netstat ps -ef -->
                 <!-- linux理解：内核态：操作硬件 用户态：执行应用程序 通过系统调用 通过内核操作io
                       /proc/pid文件目录  -->
-                <br />
-                <b>✅ 了解云原生相关技术</b><br/>
-                ▶️ 掌握Docker的使用以及编写dockerfile以及entrypoint启动脚本构建镜像<br />
-                ▶️ 掌握Kubernetes相关组件、概念模型和网络结构，了解kubectl常用API以及资源描述yml文件<br/>
+<!--                <br />-->
+                <b>✅ 云原生</b><br/>
+                ▶️ 掌握Docker的使用，了解容器化的原理<br />
+                ☸️ 掌握Kubernetes相关组件、概念模型和网络结构，了解kubectl常用API<br/>
                 ▶️ 了解Golang语法、语言特性和常用框架<br/>
-                ▶️ 掌握devops相关组件（Gitlab/Nexus/Harbor/Jenkins/Kuboard）和CI/CD流程<br/>
+<!--                <br />-->
+                <b>✅ 了解CI/CD相关组件（Gitlab/Nexus/Harbor/Jenkins/Kuboard等）</b><br />
+                <b>✅ 掌握Git、Maven等团队协同开发工具，注重代码规范性和可读性</b><br />
+<!--                <b>✅ 熟练掌握IDEA、Postman、Wireshark等开发和调试工具</b><br />-->
+<!--                <b>✅ 具备良好的书面表达能力，定期维护自己的github技术博客</b><br />-->
+<!--                <b>✅ 具备良好的逻辑思维，能使用ProcessOn辅助工具绘制流程图和UML类图</b><br />-->
                 <br />
-                <b>✅ 掌握Git、Maven等团队协同开发工具</b><br />
-                <b>✅ 注重代码规范性和可读性，了解敏捷开发相关概念</b><br />
-                <b>✅ 熟练掌握IDEA、Postman、Wireshark等开发和调试工具</b><br />
-                <b>✅ 具备良好的书面表达能力，定期维护自己的github技术博客</b><br />
-                <b>✅ 具备良好的逻辑思维，能使用ProcessOn辅助工具绘制流程图和UML类图</b><br />
-                
+                <br />
             </p>
         </li>
+<!--        ================第二页================   -->
         <hr>
         <li>
             <h3>通用能力</h3>
             <p>
                 <b>☸️ 自主学习</b><br />
-                关注新技术，注重扩展技术栈的深度和广度，利用业余时间学习。<br />
+                关注技术发展，注重扩展技术栈的深度和广度，利用业余时间学习。<br />
                 不断丰富与完善自己的知识体系，将学到的知识整理成思维导图和<a href="https://ly817.github.io/">博客</a><br />
-                <!-- 教学视频 技术分析公开课 开源社区 -->
-                <!-- 学习方法论 -->
-                <!-- go语言 k8s -->
-                <br />
+<!--                <br />-->
                 <!-- <b>》源码阅读</b><br /> -->
                 <!-- 阅读经典开源框架，来学习框架的实现原理和优秀的代码设计思路<br /> -->
                 <!-- 思路：抓主线 注入spring容器作为切入点 -->
@@ -114,13 +106,9 @@
                 <!-- - Nacos<br /> -->
                 <!-- 与eureka对比 copy on write，内存队列串行化读写操作 -->
                 <!-- 长轮训主动推送 -->
-                <!-- - Dubbo<br /> -->
-                <!-- - RocketMQ<br /> -->
+                <b>☸️ 项目管理</b><br />
                 <b>☸️ 英文阅读（CET-6）</b><br />
                 能通过查阅英文官方文档、Github和Stack Overflow解决遇到的问题<br />
-                <br />
-                <b>☸️ 项目管理</b><br />
-                <br />
             </p>
         </li>
 
