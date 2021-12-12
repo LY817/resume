@@ -57,7 +57,7 @@
     - 高频查询接口的缓存设计<br />
     &nbsp;&nbsp;&nbsp;厂家对接服务会将上报的通行记录，映射到业务系统的id<br />
     &nbsp;&nbsp;&nbsp;开始是直接查数据库，当数据量上来之后发现数据库查询出现瓶颈。<br />
-    &nbsp;&nbsp;&nbsp;使用Guava的LoadingCache作为本地缓存，封装成一个映射关系查询service，作为一个SpringBoot starter SDK被厂家对接服务引用<br/>
+    &nbsp;&nbsp;&nbsp;使用Guava的LoadingCache作为本地缓存，封装成一个映射关系查询service，作为一个SpringBoot starter被厂家对接服务引用<br/>
     &nbsp;&nbsp;&nbsp;设计考量<br/>
     &nbsp;&nbsp;&nbsp;- 单实例的缓存量不会太大：不同厂家对接服务都只会查询自己的数据，并且都是存的key-key映射，适合放在客户端缓存<br/>
     &nbsp;&nbsp;&nbsp;- 数据时效性：设置key过期时间、监听数据分发topic队列，将被修改的key进行过期，重新从数据库获取<br/>
